@@ -1,16 +1,27 @@
 <h1>Nova Loja</h1>
 <br>
 
+<!-- acesso à flash hash, ela usará notice em caso de sucesso e
+  alert em caso de falha-->
 <p><%= notice %></p>
 <p><%= alert %></p>
 <br>
 
+<!-- sintaxe padrão de formulário em Rails
+  @store deve estar definida em toda função de stores_controller que renderizar esse arquivo,
+  no caso new e create -->
+<!-- admite classes css utilizando class: -->
 <%= form_for @store, url: :stores, method: :post do |form| %>
+  <!-- checa se houveram erros de validação e exibe-os na tela em caso positivo -->
   <% if @store.errors.any? && @store.errors[:address] %>
+    <!-- sintaxe para a tag html label -->
+    <!-- admite classes css utilizando class: -->
     <%= form.label "Endereço #{@store.errors[:address].first}" %>
   <% else %>
     <%= form.label "Endereço" %>
   <% end %>
+  <!-- sintaxe para a tag html input type=text -->
+  <!-- admite classes css utilizando class: -->
   <%= form.text_field :address %>
   <br>
 
@@ -19,8 +30,12 @@
   <% else %>
     <%= form.label "Telefone" %>
   <% end %>
+  <!-- sintaxe para a tag html input type=number -->
+  <!-- admite classes css utilizando class: -->
   <%= form.number_field :telephone %>
   <br>
 
+  <!-- sintaxe para a tag html input type=submit -->
+  <!-- admite classes css utilizando class: -->
   <%= form.submit "Criar Loja" %>
 <% end %>

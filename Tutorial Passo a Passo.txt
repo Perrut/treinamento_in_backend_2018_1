@@ -1,0 +1,69 @@
+-> abra um terminal e crie uma nova aplicação rails
+  -> rails new my_app
+
+-> copie a pasta com seu layout do brafe, css e imagens para dentro da pasta my_app
+  -> recorte as imagens e cole na pasta app/assets/images
+  -> recorte os css e cole na pasta app/assets/stylesheets
+
+-> abra um terminal na pasta de sua aplicação e digite
+  -> rails generate controller static_pages index
+
+-> recorte o CONTEÚDO do arquivo index do layout do brafe e cole em app/views/static_pages/index.html.erb
+
+-> substitua todos as tags img por image_tag (você pode conferir como fazer em
+  app/views/static_pages/index.html.erb do meu projeto)
+
+-> abra o app/assets/stylesheets/style.css e o renomeie para stylesheets.css.erb
+  -> procure a imagem que está em um background e substitua o path dentro de url() por
+    <%= asset_path "nome_da_imagem.jpg" %> (nome da imagem deve ser substituído pelo nome
+    real do arquivo)
+
+-> Recorte as meta tags e cole em app/views/layouts/application.html.erb
+
+-> Retire as tag doctype, html, title, e body de app/views/static_pages/index.html.erb
+
+-> defina uma rota para sua página em config/routes.rb
+  -> confira como fazer no meu arquivo routes
+
+-> abra o arquivo app/controllers/static_pages_controller
+  -> crie uma função chamada about
+
+-> crie o arquivo app/views/static_pages/about.html.erb
+
+-> crie uma rota para ele no arquivo config/routes.rb
+
+-> acesse suas rotas para index e about e veja se funcionaram
+
+-> recorte o header do seu app/views/static_pages/index.html.erb
+  -> crie um novo arquivo chamado app/views/layouts/_header.html.erb
+
+-> recorte o footer do seu app/views/static_pages/index.html.erb
+  -> crie um novo arquivo chamado app/views/layouts/_footer.html.erb
+
+-> no arquivo app/views/layouts/application.html.erb
+  -> acima de <%= yield %>, insira <%= render "layouts/header" %>
+  -> abaixo de <%= yield %>, insira <%= render "layouts/footer" %>
+
+-> confira que o header e o footer aparecem para todas as páginas
+
+-> no arquivo app/views/layouts/_header.html.erb
+  -> substitua a tag a que tem o link sobre por um link_to para about
+
+-> no terminal de sua aplicação, digite (pressione enter ao fim de cada):
+  -> rails generate controller stores new index
+  -> rails generate model store address:string telephone:integer cnpj:integer razao_social:string
+    -> esse comando gera nossa classe store
+  -> rails db:migrate
+    -> esse comando cria nossa table stores no bd
+
+-> abra o arquivo app/views/stores/new.html.erb e substitua pelo meu
+
+-> abra o arquivo app/views/stores/index.html.erb e substitua pelo meu
+
+-> acerte as rotas para stores de acordo com meu config/routes.rb
+
+-> acerte suas validações de acordo com o meu app/models/store.rb
+
+-> defina os métodos no seu controller com o meu app/controllers/stores_controller
+
+-> não se preocupe com a correria dos últimos 5 comandos, eles estão completamente comentados
