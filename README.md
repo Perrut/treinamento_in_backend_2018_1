@@ -7,3 +7,7 @@ Você pode baixar e executar esse projeto no seu PC atráves dos seguintes passo
 * Acesse a pasta que você baixou
 * Digite -> bundle install
 * Depois -> rails server
+
+Este treinamento conta com um tutorial passo a passo escrito em Tutorial passo a passo.txt
+
+Caso você encontre algum erro, por favor entre em contato com matheus.perrut@injunior.com.br
