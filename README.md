@@ -1,24 +1,9 @@
-# README
+# Terinamento Ruby on Rails - Processo Seletivo IN Junior 2018.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto feito com Ruby 2.5 e Rails 5.1
 
-Things you may want to cover:
+Você pode baixar e executar esse projeto no seu PC atráves dos seguintes passos:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Acesse a pasta que você baixou
+* Digite -> bundle install
+* Depois -> rails server
