@@ -1,0 +1,28 @@
+<!-- arquivo de partial com o header do nosso sistema
+  utilizar partials evita a repetição desnecessária de
+  código -->
+
+<header class="menu">
+  <div class="menu-container">
+    <!-- exemplo de imagem com link, deve ser especificado o caminho
+      para o qual o link levará e dentro de do..end um image_tag contendo
+      o caminho para o arquivo de imagem, podemos inserir classes de css
+      nos nossos link através do atributo class: (exemplo: class: "navbar") -->
+    <%= link_to root_url, class: "menu-logo" do %>
+      <%= image_tag "brafe.png", alt: "Brafé" %>
+    <% end %>
+    <nav class="menu-nav">
+      <ul>
+        <!-- link_to é o equivalente em Rails para a tag html a
+          deve indicar um texto para ser exibido no nome do link,
+          o caminho que ele irá redirecionar, e no caso de não ser uma
+          requisição html GET, deve especificar qual o tipo
+          através do atributo method: (exemplo> method: :post) -->
+        <li><%= link_to "Sobre", about_path %></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Portfólio</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

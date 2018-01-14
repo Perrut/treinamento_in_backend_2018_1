@@ -1,0 +1,90 @@
+  <main class="intro">
+		<h1>Cafés com a cara<br>do Brasil</h1>
+		<p>Direto das fazendas de Minas Gerais</p>
+	</main>
+
+	<section class="sobre">
+		<h2>Uma Mistura de</h2>
+		<div class="sobre-container">
+			<div class="sobre-item">
+        <!-- image_tag é o análogo em Rails para a tag html img
+          ela renderiza imagens contidas na pasta app/assets/images,
+          caso precise usar subpastas, por exemplo:
+          app/assets/images/novas, deve-se indicar a pasta,
+          exemplo image_tag "novas/cafe-1.jpg" -->
+        <%= image_tag "cafe-1.jpg" %>
+				<h3>amor</h3>
+			</div>
+			<div class="sobre-item">
+        <%= image_tag "cafe-2.jpg" %>
+				<h3>perfeição</h3>
+			</div>
+		</div>
+		<p>O café é uma bebida produzida a partir dos grãos torrados do fruto do cafeeiro. É servido tradicionalm
+aente quente, mas também pode ser consumido gelado. Ele é um estimulante, por possuir cafeína — geralmente 80 a 140 mg para cada 207 ml dependendo do método de preparação.</p>
+	</section>
+
+	<section class="produtos">
+		<div class="produtos-container">
+			<div class="produtos-item">
+				<h2 class="produtos-paulista">Paulista</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>
+			</div>
+			<div class="produtos-item">
+				<h2 class="produtos-carioca">Carioca</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>
+			</div>
+			<div class="produtos-item">
+				<h2 class="produtos-mineiro">Mineiro</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>
+			</div>
+		</div>
+		<a class="produtos-btn" href="#">Saiba Mais</a>
+	</section>
+
+	<section class="locais">
+		<div class="locais-item">
+      <%= image_tag "botafogo.jpg", alt: "Brafé unidade Botafogo" %>
+			<div>
+				<h2>Botafogo</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo.</p>
+				<a href="#">Ver Mapa</a>
+			</div>
+		</div>
+
+		<div class="locais-item">
+      <!-- exempo de image_tag com o atributo alt,
+        analogamente, poderíamos inserir classes de css no arquivo,
+        exemplo: class: "img-responsive" -->
+      <%= image_tag "iguatemi.jpg", alt: "Brafé unidade Iguatemi" %>
+			<div>
+				<h2>Iguatemi</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo.</p>
+				<a href="#">Ver Mapa</a>
+			</div>
+		</div>
+
+		<div class="locais-item">
+      <%= image_tag "botafogo.jpg", alt: "Brafé unidade Mineirão" %>
+			<div>
+				<h2>Mineirão</h2>
+				<p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo.</p>
+				<a href="#">Ver Mapa</a>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="assine">
+		<div class="assine-container">
+			<div class="assine-info">
+				<h2>Assine Nossa Newsletter</h2>
+				<p>promoções e eventos mensais</p>
+			</div>
+			<form>
+				<label>E-mail</label>
+				<input type="text" placeholder="Digite seu e-mail">
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
+	</section>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- O arquivo application.html.erb serve de base para toda página na nossa
+  aplicação. Ou seja, todo arquivo de página html possui o código
+  contido neste arquivo -->
+
+<html>
+  <head>
+    <title>Treinamento2018</title>
+    <!-- NUNCA apaguem essa tag abaixo, ela é responsável por enviar
+      requisições seguras (encriptadas) na nossa aplicação -->
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Responsável pela importação do nosso css de TODA a aplicação,
+      não é mais necessário importar nenhum css em qualquer outro arquivo na
+      aplicação -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Análogo ao item acima, porém, para Javascript -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- renderiza nosso header através da partial _header.html.erb
+      reparem que NÃO se coloca o underscore na hora de importar o arquivo
+      a ser renderizado. -->
+    <%= render "layouts/header" %>
+    <!-- yield é responsável por renderizar nossas páginas html,
+      por exemplo, ao chamar /lojas/nova_loja, iremos renderizar
+      o conteúdo de app/views/stores/new.html.erb exatamente neste local -->
+    <%= yield %>
+    <!-- Análogo ao header, só que para o nosso footer -->
+    <%= render "layouts/footer" %>
+  </body>
+</html>
